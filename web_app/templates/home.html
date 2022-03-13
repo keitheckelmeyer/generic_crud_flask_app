@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>Important Links</h1>
+    <ul>
+        <li>
+            <a href="{{ url_for('main.initial_music_scan') }}">Scan files</a>
+        </li>
+        <li>
+            <a href="{{ url_for('main.initial_artist_album_pop') }}">Build Artists, Albums, Songs</a>
+        </li>
+        <li>
+            <a href="{{ url_for('main.start_artist_datafiles', artist='nails') }}">Create npy files for nails</a>
+        </li>
+    </ul>
+
+</div>
+<div>
+    <h1>Home</h1>
+    <h3>List of Object Classes</h3>
+    <ul>
+        {% for item in items %}
+        <li><a href="{{ url_for('main.crud_object', object_=item) }}">{{ item }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+<div>
+    <h1>Procs</h1>
+    {% for proc in procs %}
+        {{ proc }}
+    {% endfor %}
+</div>
+</body>
+</html>
