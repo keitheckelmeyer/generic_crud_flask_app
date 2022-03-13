@@ -1,6 +1,6 @@
 # generic_crud_flask_app
 
-I wanted a faster, more generic way to handle dealing with data rather than have to write a path for each object class 
+I wanted a faster, more generic way to handle dealing with data rather than have to write a route for each object class 
 (and ultimately as a template for new projects) 
 
 Ugh! 
